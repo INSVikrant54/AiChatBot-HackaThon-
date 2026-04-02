@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details — Genesis'26</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>">
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><span class="brand-icon">🐉</span><span>Genesis'26</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/events.html" class="btn-register">Register Now</a></li>
+            </ul>
+            <div class="nav-burger" id="navBurger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <div class="event-detail-page">
+        <div class="container">
+            <a href="/events.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--text-muted); margin-bottom:24px; font-size:0.9rem;">
+                ← Back to Events
+            </a>
+            <div class="event-detail-hero" id="eventDetail">
+                <div style="text-align:center; padding:60px;"><p>Loading event...</p></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Genesis'26 — Cambridge Institute of Technology, Ranchi</p>
+                <p>Made with ❤️ for CIT Ranchi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/event-detail.js"></script>
+</body>
+</html>

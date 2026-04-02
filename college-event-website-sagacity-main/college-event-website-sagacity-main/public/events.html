@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all 28 events at Genesis'26 - Cultural, Technical, Sports & Fun events. Register now!">
+    <title>Events — Genesis'26</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><span class="brand-icon">🐉</span><span>Genesis'26</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/events.html" class="active">Events</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/events.html" class="btn-register">Register Now</a></li>
+            </ul>
+            <div class="nav-burger" id="navBurger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <div class="events-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">Genesis'26 Events</div>
+                <h2 id="pageTitle">All Events</h2>
+                <p>Choose an event, check the details, and register instantly</p>
+            </div>
+
+            <!-- Search -->
+            <div style="max-width: 500px; margin: 0 auto 24px;">
+                <input type="text" class="form-control" placeholder="🔍 Search events..." id="searchInput" oninput="filterEvents()">
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-tab active" data-category="all" onclick="setFilter('all', this)">All Events</button>
+                <button class="filter-tab" data-category="1" onclick="setFilter('1', this)">🎭 Cultural</button>
+                <button class="filter-tab" data-category="2" onclick="setFilter('2', this)">🔧 Technical</button>
+                <button class="filter-tab" data-category="3" onclick="setFilter('3', this)">🏏 Sports</button>
+                <button class="filter-tab" data-category="4" onclick="setFilter('4', this)">🎮 Fun & Adventure</button>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid" id="eventsGrid">
+                <!-- Populated by JS -->
+            </div>
+
+            <div id="noResults" style="display:none; text-align:center; padding: 60px 0;">
+                <p style="font-size: 3rem; margin-bottom: 16px;">🔍</p>
+                <h3>No events found</h3>
+                <p style="color: var(--text-muted);">Try a different search or filter</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Genesis'26 — Cambridge Institute of Technology, Ranchi</p>
+                <p>Made with ❤️ for CIT Ranchi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genesis'26 - The ultimate college cultural fest by Cambridge Institute of Technology, Ranchi. 28 events across Cultural, Technical, Sports & Fun categories. April 13-18, 2026.">
+    <title>Genesis'26 — CIT Ranchi College Fest</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <span class="brand-icon">🐉</span>
+                <span>Genesis'26</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/events.html" class="btn-register">Register Now</a></li>
+            </ul>
+            <div class="nav-burger" id="navBurger" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Cambridge Institute of Technology, Ranchi
+            </div>
+            <h1><span class="gradient-text">Genesis</span>'26</h1>
+            <p class="hero-subtitle">The Ultimate College Festival Experience</p>
+            <p class="hero-college">Presented by <strong>CIT Ranchi</strong> (ESTD. 2001) &bull; April 13–18, 2026</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="number" id="statEvents">28</div>
+                    <div class="label">Events</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number">4</div>
+                    <div class="label">Categories</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number">6</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number">₹2L+</div>
+                    <div class="label">Prize Pool</div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="/events.html" class="btn btn-primary">🎯 Explore Events</a>
+                <a href="#categories" class="btn btn-outline">📋 View Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+        <h2>Event Starts <span>In</span></h2>
+        <div class="countdown-grid" id="countdown">
+            <div class="countdown-item"><div class="value" id="cd-days">00</div><div class="unit">Days</div></div>
+            <div class="countdown-item"><div class="value" id="cd-hours">00</div><div class="unit">Hours</div></div>
+            <div class="countdown-item"><div class="value" id="cd-mins">00</div><div class="unit">Minutes</div></div>
+            <div class="countdown-item"><div class="value" id="cd-secs">00</div><div class="unit">Seconds</div></div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">What Awaits You</div>
+                <h2>Event Categories</h2>
+                <p>Four powerhouse categories, 28 thrilling events. Choose your battleground.</p>
+            </div>
+            <div class="categories-grid" id="categoriesGrid">
+                <a href="/events.html?category=1" class="category-card fade-in-up">
+                    <span class="category-icon">🎭</span>
+                    <h3>Cultural Events</h3>
+                    <p>Dance, Singing, Drama, Fashion & more — unleash your artistic soul</p>
+                    <span class="event-count">8 Events &bull; Apr 16-18</span>
+                </a>
+                <a href="/events.html?category=2" class="category-card fade-in-up">
+                    <span class="category-icon">🔧</span>
+                    <h3>Technical Events</h3>
+                    <p>Hackathons, Robotics, CAD, Debugging — prove your engineering prowess</p>
+                    <span class="event-count">9 Events &bull; Apr 16-18</span>
+                </a>
+                <a href="/events.html?category=3" class="category-card fade-in-up">
+                    <span class="category-icon">🏏</span>
+                    <h3>Sport Events</h3>
+                    <p>Cricket, Basketball, Badminton, Chess — dominate the arena</p>
+                    <span class="event-count">5 Events &bull; Apr 13-15</span>
+                </a>
+                <a href="/events.html?category=4" class="category-card fade-in-up">
+                    <span class="category-icon">🎮</span>
+                    <h3>Fun & Adventure</h3>
+                    <p>E-Sports, Treasure Hunt, Roadies, Short Film — pure entertainment</p>
+                    <span class="event-count">6 Events &bull; Apr 16-18</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED EVENTS -->
+    <section class="events-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">Don't Miss Out</div>
+                <h2>Featured Events</h2>
+                <p>Our biggest and most exciting events this year</p>
+            </div>
+            <div class="events-grid" id="featuredEvents"></div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/events.html" class="btn btn-primary">View All 28 Events →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="categories-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">About The Fest</div>
+                <h2>What is Genesis'26?</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+                    <strong style="color: var(--accent-secondary);">Genesis'26</strong> is the annual cultural and technical festival of 
+                    <strong style="color: var(--accent-blue);">Cambridge Institute of Technology, Ranchi</strong> (ESTD. 2001). 
+                    Spanning 6 action-packed days from April 13-18, 2026, Genesis brings together students from across the nation 
+                    to compete, celebrate, and showcase their talents across 28 spectacular events.
+                </p>
+                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 32px;">
+                    From the electrifying energy of Crescendo's Battle of the Bands to the intellectual intensity of HackGenesis's 24-hour hackathon, 
+                    from the raw power of Robo War to the artistic beauty of Virasat's folk dance — Genesis'26 has something for everyone.
+                </p>
+                <div class="hero-stats" style="max-width: 600px; margin: 0 auto;">
+                    <div class="hero-stat">
+                        <div class="number">₹2L+</div>
+                        <div class="label">Total Prizes</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number">28</div>
+                        <div class="label">Events</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number">1000+</div>
+                        <div class="label">Expected Participants</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="categories-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">Get In Touch</div>
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to us</p>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="display: grid; gap: 16px;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" style="width: fit-content;" onclick="alert('Thank you! We will get back to you soon.')">
+                        Send Message →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <div class="container">
+        <div class="disclaimer-text">
+            <h4>DISCLAIMER</h4>
+            <p>The information provided on this website is intended for general guidance regarding the events organized under GENESIS'26. All event details, including formats, rules, schedules, and participation criteria, are subject to change at the discretion of the organizing committee without prior notice. The prize money mentioned for each event represents the minimum guaranteed amount. By registering for any event, participants agree to abide by the rules, regulations, and decisions made by the organizing committee, which shall be final and binding.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>🐉 Genesis'26</h3>
+                    <p>The ultimate college cultural & technical festival by Cambridge Institute of Technology, Ranchi. April 13-18, 2026.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/events.html">Events</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/events.html?category=1">Cultural</a></li>
+                        <li><a href="/events.html?category=2">Technical</a></li>
+                        <li><a href="/events.html?category=3">Sports</a></li>
+                        <li><a href="/events.html?category=4">Fun & Adventure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>College</h4>
+                    <ul>
+                        <li><a href="#">CIT Ranchi</a></li>
+                        <li><a href="#">ESTD. 2001</a></li>
+                        <li><a href="#">Ranchi, Jharkhand</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Genesis'26 — Cambridge Institute of Technology, Ranchi</p>
+                <p>Made with ❤️ for CIT Ranchi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
